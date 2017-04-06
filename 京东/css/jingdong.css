@@ -1,0 +1,268 @@
+@import url(reset.css);
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: none; }
+
+html {
+  font-size: 62.5%; }
+
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
+  .wrap header {
+    padding: 0.8rem 0;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    width: 100%;
+    height: 5.12rem;
+    background: none;
+    background: url("../images/dong_03.gif"); }
+    .wrap header .head_left,
+    .wrap header .head_right {
+      width: 4.86rem;
+      height: auto;
+      background: none;
+      text-align: center; }
+      .wrap header .head_left img,
+      .wrap header .head_right img {
+        width: 2.24rem;
+        height: auto;
+        background: none; }
+      .wrap header .head_left dd,
+      .wrap header .head_right dd {
+        color: #fff; }
+    .wrap header .head_center {
+      width: 100%;
+      height: 100%;
+      background: none;
+      background: url("../images/jingdong_09_03.gif");
+      padding: 0.5rem;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+      -webkit-box-flex: 1; }
+      .wrap header .head_center .canter_int {
+        width: 100%;
+        height: 100%;
+        background: none;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        background: url("../images/jingdong_09_03.gif");
+        -webkit-box-flex: 1; }
+        .wrap header .head_center .canter_int .img {
+          text-align: center;
+          line-height: 2.5rem;
+          width: 2rem;
+          height: auto;
+          background: none; }
+          .wrap header .head_center .canter_int .img img {
+            width: 1.6rem;
+            height: auto;
+            background: none; }
+        .wrap header .head_center .canter_int .cen {
+          width: 100%;
+          height: 100%;
+          background: none;
+          -webkit-box-flex: 1; }
+          .wrap header .head_center .canter_int .cen input {
+            outline: none;
+            padding-left: 0.5rem;
+            box-sizing: border-box;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background: none; }
+          .wrap header .head_center .canter_int .cen input::-webkit-input-placeholder {
+            color: #fff;
+            font-size: 1.4rem; }
+  .wrap section {
+    overflow-y: auto;
+    -webkit-box-flex: 1;
+    width: 100%;
+    height: auto;
+    background: #f3f3f3; }
+    .wrap section::-webkit-scrollbar {
+      width: 0; }
+    .wrap section .banner {
+      text-align: center;
+      width: 100%;
+      height: auto;
+      background: none; }
+      .wrap section .banner img {
+        width: 100%;
+        height: auto;
+        background: none; }
+    .wrap section .sec_main {
+      padding: 1rem 0.7rem;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      background: none; }
+      .wrap section .sec_main .main_top {
+        padding: 0.5rem 0.2rem;
+        box-sizing: border-box;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal; }
+        .wrap section .sec_main .main_top dl {
+          text-align: center;
+          -webkit-box-flex: 1; }
+          .wrap section .sec_main .main_top dl img {
+            width: 3rem;
+            height: auto;
+            background: none; }
+      @media screen and (min-width: 374px) and (max-width: 414px) {
+        .wrap section .sec_main .main_top dl img {
+          width: 4rem;
+          height: auto;
+          background: none; } }
+      @media screen and (min-width: 414px) and (max-width: 6000px) {
+        .wrap section .sec_main .main_top dl img {
+          width: 6rem;
+          height: auto;
+          background: none; } }
+      .wrap section .sec_main .inp {
+        font-weight: bold;
+        margin-top: 1rem;
+        width: 100%;
+        height: 3rem;
+        background: #fff;
+        border-radius: 0.5rem;
+        text-align: center;
+        line-height: 3rem; }
+        .wrap section .sec_main .inp img {
+          width: 2.8rem;
+          height: auto;
+          background: none; }
+        .wrap section .sec_main .inp span {
+          margin-left: 0.5rem;
+          font-weight: bold;
+          display: inline-block;
+          width: 3rem;
+          height: 2rem;
+          background: red;
+          line-height: 2rem;
+          border-radius: 0.3rem;
+          color: #fff; }
+        .wrap section .sec_main .inp b,
+        .wrap section .sec_main .inp i {
+          font-weight: bold; }
+        .wrap section .sec_main .inp i {
+          color: red; }
+      @media screen and (min-width: 320px) {
+        .wrap section .sec_main .inp {
+          font-size: 12px; }
+          .wrap section .sec_main .inp img {
+            width: 2.5rem;
+            height: auto;
+            background: none; }
+          .wrap section .sec_main .inp span {
+            font-size: 12px; } }
+      @media screen and (min-width: 374px) and (max-width: 414px) {
+        .wrap section .sec_main .inp {
+          font-size: 14px; }
+          .wrap section .sec_main .inp img {
+            width: 3rem;
+            height: auto;
+            background: none; }
+          .wrap section .sec_main .inp span {
+            font-size: 14px; } }
+    .wrap section .main_bto {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      padding: 1rem 0.7rem;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      background: #ffffff; }
+      .wrap section .main_bto .title {
+        width: 100%;
+        height: 4rem;
+        background: none; }
+        .wrap section .main_bto .title h3 {
+          font-size: 1.4rem;
+          font-weight: bold;
+          float: left; }
+          .wrap section .main_bto .title h3 span {
+            display: inline-block;
+            text-align: center;
+            width: 1.6rem;
+            height: 1.6rem;
+            background: none;
+            border: 1px solid #000;
+            line-height: 2rem; }
+        .wrap section .main_bto .title .title_right {
+          float: right;
+          font-size: 1.4rem;
+          color: red; }
+          .wrap section .main_bto .title .title_right img {
+            margin-left: 0.5rem;
+            width: 1.2rem;
+            height: auto;
+            background: none; }
+      @media screen and (min-width: 374px) and (max-width: 414px) {
+        .wrap section .main_bto .title h3 {
+          font-size: 16px; }
+        .wrap section .main_bto .title .title_right {
+          font-size: 16px; } }
+      .wrap section .main_bto .swipe {
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        width: 100%;
+        height: auto;
+        background: none; }
+        .wrap section .main_bto .swipe .swiper-container {
+          -webkit-box-flex: 1; }
+          .wrap section .main_bto .swipe .swiper-container .swiper-wrapper dl {
+            text-align: center;
+            padding: 0.5rem;
+            box-sizing: border-box; }
+            .wrap section .main_bto .swipe .swiper-container .swiper-wrapper dl dt img {
+              width: 6.5rem;
+              height: auto;
+              background: none; }
+            .wrap section .main_bto .swipe .swiper-container .swiper-wrapper dl dd h5 {
+              color: #ccc;
+              text-decoration: line-through; }
+          @media screen and (min-width: 320px) {
+            .wrap section .main_bto .swipe .swiper-container .swiper-wrapper {
+              font-size: 12px; }
+              .wrap section .main_bto .swipe .swiper-container .swiper-wrapper img {
+                width: 6.5rem;
+                height: auto;
+                background: none; } }
+          @media screen and (min-width: 374px) and (max-width: 414px) {
+            .wrap section .main_bto .swipe .swiper-container .swiper-wrapper {
+              font-size: 14px; }
+              .wrap section .main_bto .swipe .swiper-container .swiper-wrapper img {
+                width: 7.5rem;
+                height: auto;
+                background: none; } }
+    .wrap section .gogo {
+      width: 100%;
+      height: none;
+      background: auto; }
+      .wrap section .gogo img {
+        width: 100%;
+        height: auto;
+        background: none; }
+  .wrap footer {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    width: 100%;
+    height: 5rem;
+    background: none;
+    border-top: 1px solid #ccc; }
+    .wrap footer dl {
+      -webkit-box-flex: 1;
+      text-align: center;
+      padding-top: 1rem;
+      box-sizing: border-box; }
+      .wrap footer dl dt img {
+        width: 2.6rem;
+        height: auto;
+        background: none; }
+      .wrap footer dl .dd_style {
+        color: red; }

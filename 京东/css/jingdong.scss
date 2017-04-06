@@ -1,0 +1,284 @@
+@import "reset.css";
+@mixin whb($w, $h, $b) {
+    width: $w;
+    height: $h;
+    background: $b;
+}
+@mixin box($ver:vertical) {
+    display: -webkit-box;
+    -webkit-box-orient: $ver;
+}
+html,
+body,
+.wrap {
+    @include whb(100%,100%,none);
+}
+html {
+    font-size: 62.5%;
+}
+.wrap {
+    @include box;
+    header {
+        padding: 0.8rem 0;
+        box-sizing: border-box;
+        @include box(horizontal);
+        @include whb(100%,5.12rem,none);
+        background: url("../images/dong_03.gif");
+        .head_left,
+        .head_right {
+            @include whb(4.86rem,auto,none);
+            text-align: center; //          padding: 1rem 0;
+            //          box-sizing: border-box;
+            img {
+                @include whb(2.24rem,auto,none);
+            }
+            dd {
+                color: #fff;
+            }
+        }
+        .head_center {
+            @include whb(100%,100%,none);
+            background: url("../images/jingdong_09_03.gif");
+            padding: 0.5rem;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            -webkit-box-flex: 1;
+            .canter_int {
+                @include whb(100%,100%,none);
+                @include box(horizontal);
+                background: url("../images/jingdong_09_03.gif");
+                .img {
+                    text-align: center;
+                    line-height: 2.5rem;
+                    @include whb(2rem,auto,none);
+                    img {
+                        @include whb(1.6rem,auto,none);
+                    }
+                }
+                -webkit-box-flex: 1;
+                .cen {
+                    @include whb(100%,100%,none);
+                    -webkit-box-flex: 1;
+                    input {
+                        outline: none;
+                        padding-left: 0.5rem;
+                        box-sizing: border-box;
+                        border: none;
+                        @include whb(100%,100%,none);
+                    }
+                    input::-webkit-input-placeholder {
+                        color: #fff;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        //      .head_{
+        //          @include whb(4.86rem,auto,none);
+        //      }
+    }
+    section {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 0;
+        };
+        -webkit-box-flex: 1;
+        @include whb(100%,auto,#f3f3f3);
+        .banner {
+            text-align: center;
+            @include whb(100%,auto,none);
+            img {
+                @include whb(100%,auto,none);
+            }
+        }
+        .sec_main {
+            padding: 1rem 0.7rem;
+            box-sizing: border-box;
+            @include whb(100%,auto,none);
+            .main_top {
+                padding: 0.5rem 0.2rem;
+                box-sizing: border-box;
+                @include box(horizontal);
+                dl {
+                    text-align: center;
+                    -webkit-box-flex: 1;
+                    img {
+                        @include whb(3rem,auto,none);
+                    }
+                }
+            }
+            @media screen and (min-width:374px)and(max-width:414px) {
+                .main_top dl {
+                    img {
+                        @include whb(4rem,auto,none);
+                    }
+                }
+            }
+            @media screen and (min-width:414px)and(max-width:6000px) {
+                .main_top dl {
+                    img {
+                        @include whb(6rem,auto,none);
+                    }
+                }
+            }
+            .inp {
+                font-weight: bold;
+                margin-top: 1rem;
+                @include whb(100%,3rem,#fff);
+                border-radius: 0.5rem;
+                text-align: center;
+                line-height: 3rem;
+                img {
+                    @include whb(2.8rem,auto,none);
+                }
+                span {
+                    margin-left: 0.5rem;
+                    font-weight: bold;
+                    display: inline-block;
+                    @include whb(3rem,2rem,red);
+                    line-height: 2rem;
+                    border-radius: 0.3rem;
+                    color: #fff;
+                }
+                b,
+                i {
+                    font-weight: bold;
+                }
+                i {
+                    color: red;
+                }
+            }
+            @media screen and (min-width:320px) {
+                .inp {
+                    font-size: 12px;
+                    img {
+                        @include whb(2.5rem,auto,none);
+                    }
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+            @media screen and (min-width:374px)and(max-width:414px) {
+                .inp {
+                    font-size: 14px;
+                    img {
+                        @include whb(3rem,auto,none);
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+            //          @media screen and (min-width:)and(max-width:){
+            //              
+            //          }
+        }
+        .main_bto {
+            @include box;
+            padding: 1rem 0.7rem;
+            box-sizing: border-box;
+            @include whb(100%,auto,#ffffff);
+            .title {
+                //              @include box(horizontal);
+                @include whb(100%,4rem,none);
+                h3 {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    float: left;
+                    span {
+                        display: inline-block;
+                        text-align: center;
+                        @include whb(1.6rem,1.6rem,none);
+                        border: 1px solid #000;
+                        line-height: 2rem;
+                    }
+                }
+                .title_right {
+                    float: right;
+                    font-size: 1.4rem;
+                    color:red;
+                    img {
+                        margin-left: 0.5rem;
+                        @include whb(1.2rem,auto,none);
+                    }
+                }
+            }
+            @media screen and (min-width:374px)and(max-width:414px) {
+                .title h3 {
+                    font-size: 16px;
+                }
+                .title .title_right {
+                    font-size: 16px;
+                }
+            }
+            ////swiper 插件
+            .swipe {
+                @include box(horizontal);
+                @include whb(100%,auto,none);
+                .swiper-container {
+                    -webkit-box-flex: 1;
+                    .swiper-wrapper {
+                        dl {
+                            text-align: center;
+                            padding: 0.5rem;
+                            box-sizing: border-box;
+                            dt {
+                                img {
+                                    @include whb(6.5rem,auto,none);
+                                }
+                            }
+                            dd {
+                                h5 {
+                                    color: #ccc;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (min-width:320px) {
+                        .swiper-wrapper {
+                            font-size: 12px;
+                            img {
+                                @include whb(6.5rem,auto,none);
+                            }
+                        }
+                    }
+                    @media screen and (min-width:374px)and(max-width:414px) {
+                        .swiper-wrapper {
+                            font-size: 14px;
+                            img {
+                                @include whb(7.5rem,auto,none);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .gogo{
+            @include whb(100%,none,auto);
+            img{
+                @include whb(100%,auto,none);
+            }
+        }
+    }
+    footer {
+        @include box(horizontal);
+        @include whb(100%,5rem,none);
+        border-top: 1px solid #ccc;
+        dl {
+            -webkit-box-flex: 1;
+            text-align: center;
+            padding-top: 1rem;
+            box-sizing: border-box;
+            dt {
+                img {
+                    @include whb(2.6rem,auto,none);
+                }
+            }
+            .dd_style {
+                color: red;
+            }
+        }
+    }
+}
