@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+body,div{ margin:0px; padding:0;}
+.mainbox{ position:relative; width:100%;}
+.mainbox a{ display:block; float:left; width:33.3%; min-height:120px;}
+.mainbox a img{ width:90%; margin:5%;}
+.mainbox a span{ display:block; position:absolute; width:100%; height:100%; background:rgba(0,0,0,0.6); color:#fff; top:0px; left:0px; opacity:0;}
+</style>
+</head>
+
+<body>
+<div class="mainbox" id="mainbox">
+
+    
+</div>
+<script>
+window.onload=function(){
+	var mainBox=document.getElementById("mainbox");
+	var w_h=window.innerHeight;
+	var max_h=0;
+	for(var i=1;i<30;i++){
+		var aBox=document.createElement("a");
+		var img=document.createElement("img");
+		img.src="img/"+i+".jpg";
+		aBox.appendChild(img);
+		mainBox.appendChild(aBox);
+	}
+	
+	setTimeout(function(){
+		max_h=setWtf(mainBox);
+	},500);
+	
+	window.onscroll=function(){
+		var scrollTop=document.body.scrollTop+w_h;
+		if((max_h-scrollTop)<100){
+			for(var i=30;i<50;i++){
+				var aBox=document.createElement("a");
+				var img=document.createElement("img");
+				img.src="img/"+i+".jpg";
+				aBox.appendChild(img);
+				mainBox.appendChild(aBox);
+				
+			}
+			max_h=setWtf(mainBox);
+		}
+		//console.log(scrollTop);
+	}
+	
+}
+/*瀑布流布局函数*/
+function setWtf(mainBox){
+	var imgAll=mainBox.getElementsByTagName("a");
+	var arr=[];
+	var _w=mainBox.offsetWidth*0.333;
+	for(var i=0;i<imgAll.length;i++){
+		if(i<3){
+			arr[i]=imgAll[i].offsetHeight;
+		}else{
+			imgAll[i].style.position="absolute";
+			var _min=Math.min.apply(null,arr);
+			var index=arr.indexOf(_min);
+			imgAll[i].style.left=index*_w+"px";
+			imgAll[i].style.top=_min+"px";
+			arr[index]=_min+imgAll[i].offsetHeight;
+		}
+	}
+	return Math.max.apply(null,arr);
+}
+</script>
+</body>
+</html>
